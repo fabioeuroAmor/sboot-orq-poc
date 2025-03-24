@@ -26,4 +26,8 @@ public class PocProduce {
 
     }
 
+    public void setTopicName(String topicName) {
+        this.topicName = topicName;
+    }
+
 }
