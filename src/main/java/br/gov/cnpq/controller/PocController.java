@@ -16,14 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class PocController {
 
     @GetMapping(value = "/teste")
-    public ResponseEntity<Response> buscaCidadesPorNome(){
+    public ResponseEntity<Response> realizarTeste(){
         Response response = new Response();
         try {
             response.setModeloRetorno(null);
-            response.setMensagensRetorno("Cidade atualizada da base de dados!" );
+            response.setMensagensRetorno("Micorservice esta no ar" );
 
         }catch (Exception e){
-            log.error("Erro ao consultar a cidade pelo nome: " + e.getMessage());
+            log.error("Erro ao testar a poc: " + e.getMessage());
+            response.setMensagensRetorno(e.getMessage());
         }
         return ResponseEntity.ok(response);
     }
