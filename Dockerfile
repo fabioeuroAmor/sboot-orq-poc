@@ -1,14 +1,11 @@
-# Use uma imagem base do Java
+# Usar uma imagem base do OpenJDK
 FROM openjdk:11-jre-slim
 
-# Defina o diretório de trabalho
-WORKDIR /app
+# Definir a localização do aplicativo
+ARG JAR_FILE=target/*.jar
 
-# Copie o JAR do seu aplicativo para o contêiner
-COPY target/sboot-orq-poc-0.0.1-SNAPSHOT.jar aplicativo.jar
+# Copiar o JAR do build para a imagem
+COPY ${JAR_FILE} app.jar
 
-# Exponha a porta que o aplicativo usará
-EXPOSE 8080
-
-# Comando para executar o aplicativo
-ENTRYPOINT ["java", "-jar", "aplicativo.jar"]
+# Executar o JAR
+ENTRYPOINT ["java","-jar","/app.jar"]
