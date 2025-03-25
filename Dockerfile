@@ -1,5 +1,6 @@
 # Usar uma imagem base do OpenJDK
-FROM openjdk:11-jre-slim
+FROM openjdk:21-jdk-slim
+RUN java -version
 
 # Definir a localização do aplicativo
 ARG JAR_FILE=target/*.jar
