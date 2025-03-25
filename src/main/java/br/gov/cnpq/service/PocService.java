@@ -9,12 +9,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class PocService {
-
-
     @Autowired
     private PocProduce pocProduce;
-
-
     public void send(String mensagem) throws NegocioException {
         try {
             pocProduce.send(mensagem);

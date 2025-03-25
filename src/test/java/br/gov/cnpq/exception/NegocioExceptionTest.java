@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class NegocioExceptionTest {
+class NegocioExceptionTest {
 
     @Test
-    public void testNegocioExceptionWithMessage() {
+    void testNegocioExceptionWithMessage() {
         String message = "Uma mensagem de erro";
         NegocioException exception = new NegocioException(message);
 
@@ -16,7 +16,7 @@ public class NegocioExceptionTest {
     }
 
     @Test
-    public void testNegocioExceptionWithMessageAndCause() {
+    void testNegocioExceptionWithMessageAndCause() {
         String message = "Uma mensagem de erro";
         Throwable cause = new RuntimeException("Causa da exceção");
         NegocioException exception = new NegocioException(message, cause);

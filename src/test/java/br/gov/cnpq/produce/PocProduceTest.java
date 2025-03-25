@@ -11,7 +11,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
 
-public class PocProduceTest {
+class PocProduceTest {
 
     @InjectMocks
     private PocProduce pocProduce;
@@ -28,7 +28,7 @@ public class PocProduceTest {
     }
 
     @Test
-    public void testSendSuccess() {
+    void testSendSuccess() {
         // Cenário: Mensagem enviada com sucesso
         String message = "Teste de mensagem";
 
@@ -40,7 +40,7 @@ public class PocProduceTest {
     }
 
     @Test
-    public void testSendException() {
+    void testSendException() {
         // Cenário: exceção lançada ao enviar a mensagem
         String message = "Teste de mensagem";
 

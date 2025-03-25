@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
-public class PocControllerTest {
+class PocControllerTest {
 
     @InjectMocks
     private PocController pocController;
@@ -26,7 +26,7 @@ public class PocControllerTest {
     }
 
     @Test
-    public void testRealizarTesteSuccess() {
+    void testRealizarTesteSuccess() {
         // Cenário: Mensagem é enviada com sucesso
 
         String mensagem = "Teste de mensagem";
@@ -44,7 +44,7 @@ public class PocControllerTest {
     }
 
     @Test
-    public void testRealizarTesteException() {
+    void testRealizarTesteException() {
         // Cenário: Exceção lançada ao enviar a mensagem
         String mensagem = "Teste de mensagem";
 

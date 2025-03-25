@@ -11,7 +11,7 @@ import org.mockito.MockitoAnnotations;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
 
-public class PocServiceTest {
+class PocServiceTest {
 
     @InjectMocks
     private PocService pocService;
@@ -25,7 +25,7 @@ public class PocServiceTest {
     }
 
     @Test
-    public void testSendSuccess() throws NegocioException {
+    void testSendSuccess() throws NegocioException {
         // Cenário: a mensagem é enviada com sucesso
         String mensagem = "Teste de mensagem";
 
@@ -37,7 +37,7 @@ public class PocServiceTest {
     }
 
     @Test
-    public void testSendThrowsNegocioException() {
+    void testSendThrowsNegocioException() {
         // Cenário: exceção lançada ao produzir a mensagem
         String mensagem = "Teste de mensagem";
         String errorMessage = "Erro ao enviar mensagem";

@@ -13,7 +13,7 @@ import org.springframework.messaging.support.MessageHeaderAccessor;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 
-public class PocConsumerTest {
+class PocConsumerTest {
 
     @InjectMocks
     private PocConsumer pocConsumer;
@@ -27,7 +27,7 @@ public class PocConsumerTest {
     }
 
     @Test
-    public void testConsume() {
+    void testConsume() {
         // Cenário: Criar um ConsumerRecord simulado
         String topicName = "meu-topico";
         String key = "minha-chave";
