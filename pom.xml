@@ -63,11 +63,18 @@
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
 		<!--Dependencia para uso do Kafka-->
-		<!-- ...others dependencies -->
+		<!-- .. Gerar Relatorio de cobertura de teste -->
 		<dependency>
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.12</version>
+		</dependency>
+      <!--Verificar Vunerabilidades de libs-->
+		<dependency>
+			<groupId>org.owasp</groupId>
+			<artifactId>dependency-check-maven</artifactId>
+			<version>8.2.1</version>
+			<type>maven-plugin</type>
 		</dependency>
 	</dependencies>
 
@@ -129,6 +136,19 @@
 						<phase>prepare-package</phase>
 						<goals>
 							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+            <!-- Verificar Vunerabilidades de libs -->
+			<plugin>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>8.2.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
 						</goals>
 					</execution>
 				</executions>
