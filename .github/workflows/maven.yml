@@ -34,6 +34,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Cobertura por execução de teste 
+      run: mvn org.jacoco:jacoco-maven-plugin:prepare-agent install -Pcoverage-per-test 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
